@@ -4,7 +4,8 @@
   "description": "我们一步一步学习怎么开发一个简易版本的react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config=./build/webpack.config.js --mode=development"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/zo11o/simple-react/issues"
   },
-  "homepage": "https://github.com/zo11o/simple-react#readme"
+  "homepage": "https://github.com/zo11o/simple-react#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }
