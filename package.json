@@ -4,7 +4,7 @@
   "description": "我们一步一步学习怎么开发一个简易版本的react",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "webpack-dev-server NODE_ENV=dev --config=./build/webpack.dev.conf.js --mode=development --open",
+    "start": "webpack-dev-server --config=./build/webpack.dev.conf.js --mode=development --open",
     "dev": "webpack --config=./build/webpack.dev.conf.js --mode=development --progress",
     "build": "webpack --config=./build/webpack.prod.conf.js --mode=production --progress",
     "prod": "cross-env NODE_ENV=production node build/build.js"

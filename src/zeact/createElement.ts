@@ -21,3 +21,5 @@ function $createElement(type: string, _props: any, ...children: any) {
 function createElement(el: string, props: any, ...children: any) {
     return $createElement(el, props || {}, ...children);
 }
+
+export default createElement

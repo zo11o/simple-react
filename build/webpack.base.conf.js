@@ -33,9 +33,10 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            title: 'index',
+            title: 'simple-react',
             inject: true, // true：默认值，script标签位于html文件的 body 底部
             hash: true, // 在打包的资源插入html会加上hash
+            template: 'index.html'
         }),
     ],
     // devServer: {

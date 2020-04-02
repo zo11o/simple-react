@@ -7,10 +7,6 @@ const webpackBaseConfig = require('./webpack.base.conf.js')
 const ora = require("ora")
 const chalk = require('chalk')
 
-const spinner = ora("build...")
-spinner.start()
-console.log(process.env.NODE_ENV)
-
 module.exports = webpackMerge(webpackBaseConfig, {
     mode: "development",
     devServer: {
