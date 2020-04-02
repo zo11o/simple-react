@@ -1,3 +1,3 @@
 let a: string = 'ccc11';
 
-alert(2)
+alert('你22好111')

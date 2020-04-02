@@ -2,10 +2,12 @@
   "name": "simple-react",
   "version": "1.0.0",
   "description": "我们一步一步学习怎么开发一个简易版本的react",
-  "main": "index.js",
+  "main": "./src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config=./build/webpack.config.js --mode=development"
+    "start": "webpack-dev-server NODE_ENV=dev --config=./build/webpack.dev.conf.js --mode=development --open",
+    "dev": "webpack --config=./build/webpack.dev.conf.js --mode=development --progress",
+    "build": "webpack --config=./build/webpack.prod.conf.js --mode=production --progress",
+    "prod": "cross-env NODE_ENV=production node build/build.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,22 @@
   },
   "homepage": "https://github.com/zo11o/simple-react#readme",
   "devDependencies": {
+    "@types/node": "^13.9.8",
+    "chalk": "^3.0.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "happypack": "^5.0.1",
     "html-webpack-plugin": "^4.0.4",
+    "ora": "^4.0.3",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2"
   }
 }
