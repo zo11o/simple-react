@@ -6,10 +6,10 @@ const webpack = require('webpack')
 module.exports = {
     mode: "development",
     devtool: "inline-source-map",
-    entry: "./src/index.ts",
+    entry: path.resolve(__dirname, '../src/index.ts'),
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].[hash:8].js'
+        filename: '[name].bundle.js'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
@@ -29,5 +29,10 @@ module.exports = {
             title: 'index'
         }),
         new CleanWebpackPlugin()
-    ]
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
+    }
 }
