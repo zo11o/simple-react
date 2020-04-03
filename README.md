@@ -74,3 +74,13 @@ module.exports = {
     }
 }
 ```
+
+第一单元流程 unit1 分支
+
+React.createElement() 返回一个 ReactElement 实例对象（虚拟 dom tree 节点） -> reactElementInstance
+
+reactElementInstance 传递给 ReactDOM.render 方法
+
+ReactDOM.render 方法主要做一些参数校验，合理通过之后调用 legacyRenderSubtreeIntoContainer 方法
+
+
