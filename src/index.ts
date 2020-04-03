@@ -1,14 +1,18 @@
 import Zeact from './zeact'
+import ZeactDOM from './zeact-dom'
 
-let App = 'hello world';
+// <div name="zorro">hello, world</div>
 
-// <div name="hello">hello, <span> world</span></div>
-// let VNode = Zeact.createElement{
-//     type: 'div',
-//     props: {
-//         name: 'hello,',
-//         children: ['span', ]
-//     },
-// }
+let App = Zeact.createElement('div', {
+    name: 'zorro',
+}, 'hello, world', Zeact.createElement('span', {
+    name: 'san'
+}, ' I am Zeact', Zeact.createElement('span', {
+    name: 'zi'
+}, ' I am Zi')))
 
-Zeact.render(App, document.getElementById('root') as HTMLDivElement);
+// let App = Zeact.createElement('div', {
+//     name: 'zorro',
+// }, 'hello, world');
+
+ZeactDOM.render(App, document.getElementById('root') as HTMLDivElement);
