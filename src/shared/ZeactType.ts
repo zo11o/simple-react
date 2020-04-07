@@ -11,4 +11,4 @@ export type ZeactElement = {
 
 export type ZeactEmpty = null | void | boolean;
 
-export type ReactNodeList = ZeactEmpty | any;
+export type ZeactNodeList = ZeactEmpty | any;
